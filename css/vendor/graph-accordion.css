@@ -1,0 +1,50 @@
+.accordion {
+  --accordion-time: 0.3s;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.accordion__control {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.accordion__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height;
+  -webkit-transition: all var(--accordion-time) ease-out;
+  -o-transition: all var(--accordion-time) ease-out;
+  transition: all var(--accordion-time) ease-out;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.accordion__title {
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
+.accordion__icon {
+  -webkit-transition: -webkit-transform var(--accordion-time) ease-out;
+  transition: -webkit-transform var(--accordion-time) ease-out;
+  -o-transition: transform var(--accordion-time) ease-out;
+  transition: transform var(--accordion-time) ease-out;
+  transition: transform var(--accordion-time) ease-out, -webkit-transform var(--accordion-time) ease-out;
+}
+
+.is-open .accordion__icon {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.is-open .accordion__content {
+  opacity: 1;
+}
+/*# sourceMappingURL=graph-accordion.css.map */
